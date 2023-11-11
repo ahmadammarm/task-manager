@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import GlobalStyleProvider from './GlobalStyleProvider'
+import { GlobalProvider } from '../context/globalProvider'
 
 interface Props {
     children: React.ReactNode
@@ -10,9 +10,9 @@ interface Props {
 function ContextProvider({ children }: Props) {
   return (
 
-        <GlobalStyleProvider>
+        <GlobalProvider>
             {children}
-        </GlobalStyleProvider>
+        </GlobalProvider>
 
   )
 }
