@@ -3,9 +3,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const SidebarStyled = styled.nav`
 
-`;
 
 const Sidebar = () => {
   return (
@@ -14,5 +12,9 @@ const Sidebar = () => {
     </SidebarStyled>
   )
 }
+
+const SidebarStyled = styled.nav`
+
+`;
 
 export default Sidebar
