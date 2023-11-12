@@ -2,21 +2,30 @@
 
 import React from 'react'
 import styled from 'styled-components';
-import {useGlobalState} from '@/app/context/globalProvider';
+import { useGlobalState } from '@/app/context/globalProvider';
 import Image from 'next/image';
 
 
 
 const Sidebar = () => {
 
-  const {theme} = useGlobalState();
+  const { theme } = useGlobalState();
 
   return (
     <SidebarStyled theme={theme}>
       <div className="profile">
         <div className="profile-overlay"></div>
-        <Image src="/images/profile.jpg" alt="profile" width={70} height={70} className="profile-image" />
+        <div className="image">
+          <Image src="/images/profile.jpg" alt="profile" width={70} height={70} className="profile-image" />
+        </div>
+        <h1>
+          <span>Ahmad</span>
+          <span>Ammar</span>
+        </h1>
       </div>
+      <ul className="nav-items">
+        
+      </ul>
     </SidebarStyled>
   )
 }
