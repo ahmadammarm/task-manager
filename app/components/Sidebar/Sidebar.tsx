@@ -5,11 +5,21 @@ import styled from 'styled-components';
 import { useGlobalState } from '@/app/context/globalProvider';
 import Image from 'next/image';
 
+import menu from '@/app/utils/menu';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 
 
 const Sidebar = () => {
 
   const { theme } = useGlobalState();
+
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleClick = (link: string) => {
+    router.push(link);
+  };
 
   return (
     <SidebarStyled theme={theme}>
@@ -24,7 +34,21 @@ const Sidebar = () => {
         </h1>
       </div>
       <ul className="nav-items">
-        
+        {menu.map((item) => {
+          const link = item.link;
+          return (
+            <li
+              key={item.id}
+              className={`nav-item ${pathname === link ? "active" : ""}`}
+              onClick={() => {
+                handleClick(link);
+              }}
+            >
+              {item.icon}
+              <Link href={link}>{item.title}</Link>
+            </li>
+          );
+        })}
       </ul>
     </SidebarStyled>
   )
