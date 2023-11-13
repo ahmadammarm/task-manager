@@ -76,6 +76,32 @@ const SidebarStyled = styled.nav`
     color: ${(props) => props.theme.colorGrey0};
     display: flex;
     align-items: center;
+
+    .profile-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      z-index: 0;
+      background: ${(props) => props.theme.colorBg1};
+      transition: all 0.5s linear;
+      opacity: 0.2;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+      line-height: 1.4rem;
+    }
+    
+    .image {
+      position: relative;
+    }
   }
 
 
