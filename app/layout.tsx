@@ -8,7 +8,7 @@ import ContextProvider from './providers/ContextProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Task Forge',
+  title: 'TaskFlowPro',
   description: '',
 }
 
