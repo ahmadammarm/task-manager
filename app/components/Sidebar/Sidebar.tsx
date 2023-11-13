@@ -99,11 +99,27 @@ const SidebarStyled = styled.nav`
       line-height: 1.4rem;
     }
     
-    .image {
+    .image,
+    h1 {
       position: relative;
+      z-index: 1;
+    }
+
+    .image {
+      flex-shrink: 0;
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      border-radius: 100%;
+      transition: all 0.5s ease;
+      overflow: hidden;
+    }
+
+    img {
+      border-radius: 100%;
+      transition: all 0.5s ease;
     }
   }
-
 
 `;
 
