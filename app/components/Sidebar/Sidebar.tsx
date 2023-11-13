@@ -50,6 +50,7 @@ const Sidebar = () => {
           );
         })}
       </ul>
+      <button></button>
     </SidebarStyled>
   )
 }
@@ -60,6 +61,23 @@ const SidebarStyled = styled.nav`
   width: ${(props) => props.theme.sidebarWidth};
   border: 2px solid ${(props) => props.theme.borderColor2};
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: ${(props) => props.theme.colorGrey3};
+  
+  .profile {
+    margin: 1rem;
+    padding: 1rem 0.8rem;
+    position: relative;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: 600; 
+    color: ${(props) => props.theme.colorGrey0};
+    display: flex;
+    align-items: center;
+  }
+
 
 `;
 
