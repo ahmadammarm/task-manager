@@ -54,6 +54,7 @@ const Sidebar = () => {
           );
         })}
       </ul>
+      <button>Red</button>
     </SidebarStyled>
   )
 }
