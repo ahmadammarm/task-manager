@@ -54,7 +54,6 @@ const Sidebar = () => {
           );
         })}
       </ul>
-      <button></button>
     </SidebarStyled>
   )
 }
